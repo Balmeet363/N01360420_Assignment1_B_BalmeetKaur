@@ -22,85 +22,85 @@ namespace N01360420_Assignment1_ONB_BalmeetKaur {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// aspx_user_skydive_reason control.
+        /// user_skydive_reason control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox aspx_user_skydive_reason;
+        protected global::System.Web.UI.WebControls.TextBox user_skydive_reason;
         
         /// <summary>
-        /// aspx_user_age_answer control.
+        /// user_age control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList aspx_user_age_answer;
+        protected global::System.Web.UI.WebControls.RadioButtonList user_age;
         
         /// <summary>
-        /// aspx_user_weight_answer control.
+        /// user_weight control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList aspx_user_weight_answer;
+        protected global::System.Web.UI.WebControls.RadioButtonList user_weight;
         
         /// <summary>
-        /// aspx_user_jumpoption control.
+        /// user_skydive_date control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList aspx_user_jumpoption;
+        protected global::System.Web.UI.WebControls.DropDownList user_skydive_date;
         
         /// <summary>
-        /// aspx_user_altitudeoption control.
+        /// user_skydive_time control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList aspx_user_altitudeoption;
+        protected global::System.Web.UI.WebControls.DropDownList user_skydive_time;
         
         /// <summary>
-        /// aspx_user_skydive_date control.
+        /// people_attendes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList aspx_user_skydive_date;
+        protected global::System.Web.UI.WebControls.TextBox people_attendes;
         
         /// <summary>
-        /// aspx_user_skydive_time control.
+        /// user_jump_type control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList aspx_user_skydive_time;
+        protected global::System.Web.UI.WebControls.RadioButtonList user_jump_type;
         
         /// <summary>
-        /// user_people_numberselection control.
+        /// user_altitude_type control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox user_people_numberselection;
+        protected global::System.Web.UI.WebControls.RadioButtonList user_altitude_type;
         
         /// <summary>
-        /// user_jumper_selection control.
+        /// jumper_attendes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox user_jumper_selection;
+        protected global::System.Web.UI.WebControls.TextBox jumper_attendes;
         
         /// <summary>
         /// user_location_selection control.
@@ -112,39 +112,48 @@ namespace N01360420_Assignment1_ONB_BalmeetKaur {
         protected global::System.Web.UI.WebControls.DropDownList user_location_selection;
         
         /// <summary>
-        /// aspx_user_fullname control.
+        /// user_fullname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox aspx_user_fullname;
+        protected global::System.Web.UI.WebControls.TextBox user_fullname;
         
         /// <summary>
-        /// aspx_user_phone_number control.
+        /// user_phone_number control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox aspx_user_phone_number;
+        protected global::System.Web.UI.WebControls.TextBox user_phone_number;
         
         /// <summary>
-        /// aspx_user_email control.
+        /// user_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox aspx_user_email;
+        protected global::System.Web.UI.WebControls.TextBox user_email;
         
         /// <summary>
-        /// aspx_user_aggrement_selection control.
+        /// user_aggrement_selection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList aspx_user_aggrement_selection;
+        protected global::System.Web.UI.WebControls.CheckBoxList user_aggrement_selection;
+        
+        /// <summary>
+        /// submit_details control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl submit_details;
     }
 }

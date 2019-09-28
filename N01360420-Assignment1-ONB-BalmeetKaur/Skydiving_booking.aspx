@@ -19,42 +19,28 @@
 
             <section>
                 <h4>Why do you want to skydive?</h4>
-                <asp:TextBox runat="server" ID="aspx_user_skydive_reason" ></asp:TextBox>
+                <asp:TextBox runat="server" ID="user_skydive_reason" ></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" Enableclientscript="true"  ErrorMessage="Please enter reason" ControlToValidate="user_skydive_reason"></asp:RequiredFieldValidator>
           
                 <h4>Are you above 18 years of age?</h4>
-                <asp:RadioButtonList runat="server" ID="aspx_user_age_answer">
+                <asp:RadioButtonList runat="server" ID="user_age">
                     <asp:ListItem Text="Yes" Value="YES"></asp:ListItem>
                     <asp:ListItem Text="No" Value="NO"></asp:ListItem>
                 </asp:RadioButtonList>
-            
+                <asp:RequiredFieldValidator runat="server" EnableClientScript="true" ErrorMessage="Please select age" ControlToValidate="user_age"></asp:RequiredFieldValidator>
+
                 <h4>Is your weight less than 240 lbs?</h4>
-                <asp:RadioButtonList runat="server" ID="aspx_user_weight_answer">
+                <asp:RadioButtonList runat="server" ID="user_weight">
                     <asp:ListItem Text="Yes" Value="YES"></asp:ListItem>
                     <asp:ListItem Text="No" Value="NO"></asp:ListItem>
                 </asp:RadioButtonList>
+                <asp:RequiredFieldValidator runat="server" EnableClientScript="true" ErrorMessage="Please select option" ControlToValidate="user_weight"></asp:RequiredFieldValidator>
            </section>
-
-            <section>
-                <h4>Choose your jump type below to start:</h4>
-                    <asp:RadioButtonList runat="server" ID="aspx_user_jumpoption">
-                        <asp:ListItem Text="Tendem" Value="TENDER"></asp:ListItem>
-                        <asp:ListItem Text="TDS" Value="TDS"></asp:ListItem>
-                    </asp:RadioButtonList>
-            </section>
-
-            <section>
-                <h4>Choose your altitude:</h4>
-                <asp:RadioButtonList runat="server" ID="aspx_user_altitudeoption">
-                    <asp:ListItem Text="18,000 Feet" Value="18,000FEET"></asp:ListItem>
-                    <asp:ListItem Text="14,000 Feet" Value="14,000FEET"></asp:ListItem>
-                    <asp:ListItem Text="10,000 Feet" Value="10,000FEET"></asp:ListItem>
-                 </asp:RadioButtonList>  
-            </section>
 
             <section>
                 <h4>When do you want to skydive?</h4>
                 <label>Select Date and Time:</label>
-                <asp:DropDownList runat="server" ID="aspx_user_skydive_date">
+                <asp:DropDownList runat="server" ID="user_skydive_date">
                     <asp:ListItem Text="Select Date" Value=""></asp:ListItem>
                     <asp:ListItem Text="1" Value="day1"></asp:ListItem>
                     <asp:ListItem Text="2" Value="day2"></asp:ListItem>
@@ -88,7 +74,8 @@
                     <asp:ListItem Text="30" Value="day30"></asp:ListItem>
                     <asp:ListItem Text="31" Value="day31"></asp:ListItem>
                </asp:DropDownList>
-               <asp:DropDownList runat="server" ID="aspx_user_skydive_time">
+                <asp:RequiredFieldValidator runat="server" EnableClientScript="true" ErrorMessage="Please select date" ControlToValidate="user_skydive_date"></asp:RequiredFieldValidator>
+               <asp:DropDownList runat="server" ID="user_skydive_time">
                  <asp:ListItem Text="Select Time" Value=""></asp:ListItem>
                  <asp:ListItem Text="8:30am" Value="8:30am"></asp:ListItem>
                  <asp:ListItem Text="10:30am" Value="10:30am"></asp:ListItem>
@@ -96,16 +83,39 @@
                  <asp:ListItem Text="2:30pm" Value="2:30pm"></asp:ListItem>
                  <asp:ListItem Text="4:30pm" Value="4:30pm"></asp:ListItem>
                </asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" EnableClientScript="true" ErrorMessage="Please select time" ControlToValidate="user_skydive_time"></asp:RequiredFieldValidator>
             </section>
 
             <section>
-                <h4>How many people you wish to book for this date and time?</h4>
-                <asp:TextBox runat="server" ID="user_people_numberselection" ></asp:TextBox>
+                <h4>How many people you wish to book for this date and time?(maximum 2)</h4>
+                <asp:TextBox runat="server" ID="people_attendes" ></asp:TextBox>
+                <asp:RangeValidator runat="server" EnableClientScript="true" ErrorMessage="Please enter number between 0  to 2"  MinimumValue="0"  MaximumValue="2" ControlToValidate="people_attendes"></asp:RangeValidator>
             </section>
 
             <section>
-                <h4>Number of Jumpers:</h4>
-                <asp:TextBox runat="server" ID="user_jumper_selection" ></asp:TextBox>
+                <h4>Choose your jump type below to start:</h4>
+                    <asp:RadioButtonList runat="server" ID="user_jump_type">
+                        <asp:ListItem Text="Tendem" Value="TENDER"></asp:ListItem>
+                        <asp:ListItem Text="TDS" Value="TDS"></asp:ListItem>
+                    </asp:RadioButtonList>
+                    <asp:RequiredFieldValidator runat="server" EnableClientScript="true" ErrorMessage="Please select jump type" ControlToValidate="user_jump_type"></asp:RequiredFieldValidator>
+            </section>
+
+            <section>
+                <h4>Choose your altitude:</h4>
+                <asp:RadioButtonList runat="server" ID="user_altitude_type">
+                    <asp:ListItem Text="18,000 Feet" Value="18,000FEET"></asp:ListItem>
+                    <asp:ListItem Text="14,000 Feet" Value="14,000FEET"></asp:ListItem>
+                    <asp:ListItem Text="10,000 Feet" Value="10,000FEET"></asp:ListItem>
+                 </asp:RadioButtonList>  
+                 <asp:RequiredFieldValidator runat="server" EnableClientScript="true" ErrorMessage="Please choose your altitude" ControlToValidate="user_altitude_type"></asp:RequiredFieldValidator>
+            </section>
+
+
+            <section>
+                <h4>Number of Jumpers:(maximum 2)</h4>
+                <asp:TextBox runat="server" ID="jumper_attendes" ></asp:TextBox>
+                <asp:RangeValidator runat="server" EnableClientScript="true" ErrorMessage="Please number between 0 to 3" ControlToValidate="jumper_attendes" MinimumValue="0" MaximumValue="3"></asp:RangeValidator>
             </section>
 
             <section>
@@ -119,33 +129,40 @@
                     <asp:ListItem Text="Interlaken,Switzerland" Value="Interlaken,Switzerland"></asp:ListItem>
                     <asp:ListItem Text="Wollongong_Beach,Australia" Value="Wollongong_Beach,Australia"></asp:ListItem>
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ErrorMessage="Please select location" EnableClientScript="true" ControlToValidate="user_location_selection"></asp:RequiredFieldValidator>
             </section>
-
             <section>
                 <h4>To make booking at this date please fill contact details:</h4>
                 <div>
                     <label>What's your Full Name?</label>
-                    <asp:TextBox runat="server" ID="aspx_user_fullname" ></asp:TextBox>
+                    <asp:TextBox runat="server" ID="user_fullname" ></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" EnableClientScript="true" ErrorMessage="Please enter Full Name" ControlToValidate="user_fullname"></asp:RequiredFieldValidator>
                 </div>
                 <div>
-                    <label>What's your Phone No?</label>
-                    <asp:TextBox runat="server" ID="aspx_user_phone_number" ></asp:TextBox>
+                    <% /* Used Regular Expression Validator from class lectures */ %>
+                    <label>Please enter Your Phone No.ie (999) 212 8350</label>
+                    <asp:TextBox runat="server" ID="user_phone_number" ></asp:TextBox>
+                    <asp:RegularExpressionValidator runat="server" EnableClientScript="true" ErrorMessage="Ivalid Phnone Number" ControlToValidate="user_phone_number" ValidationExpression="[(]{0,1}[0-9]{3}[)]{0,1}(\s*|\-+)[0-9]{3}(\s*|\-+)[0-9]{4}"></asp:RegularExpressionValidator>
+                    
                 </div>
                 <div>
                     <label>What's your Email?</label>
-                    <asp:TextBox runat="server" ID="aspx_user_email" ></asp:TextBox>
+                    <asp:TextBox runat="server" ID="user_email" ></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" EnableClientScript="true" ErrorMessage="Please enter email" ControlToValidate="user_email"></asp:RequiredFieldValidator> 
                 </div>
             </section>
-
             <section>
-                <asp:CheckBoxList ID="aspx_user_aggrement_selection" runat="server">
+                <asp:CheckBoxList ID="user_aggrement_selection" runat="server">
                     <asp:ListItem Text="I have read the skydiving policies and FAQ and agree to all published policies about age,height,weight and appointment times at faculty.All sales are final no refunds." Value="agreement_statement1"></asp:ListItem>
                     <asp:ListItem Text="I understand that the time I selected is my CHECK-IN time, not when I will be skydiving." Value="aggrement_statement2"></asp:ListItem>
                 </asp:CheckBoxList>
             </section>
-
             <section>
-                <asp:Button runat="server" Text="BOOK NOW" />
+                <asp:ValidationSummary runat="server" ShowSummary="true" />
+            </section>
+            <div id="submit_details" runat="server"></div>
+            <section>
+                <input type="submit" value="BOOK NOW" />
             </section>
         </div>
     </form>
